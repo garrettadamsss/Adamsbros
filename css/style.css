@@ -1,0 +1,63 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+html{
+    font-size: 16px; 
+}
+body{
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: 'Montserrat', sans-serif; 
+}
+header{
+    min-width: 70rem; 
+    font-size: 1.1rem; 
+    height: 8rem; 
+    padding: 1rem 1rem; 
+    width: 100%; 
+    background-color:hsl(225, 100%, 60%);
+}
+header .logo{
+    padding: 1rem 2rem; 
+    float: left; 
+}
+header nav{
+
+    height: auto;
+    margin-top: 4rem; 
+
+}
+
+header nav ul {
+    float: left;  
+}
+header nav ul li{
+    float: left; 
+    list-style: none; 
+    padding: 1rem 1rem;  
+    position: relative; 
+}
+header ul li a{
+    text-decoration: none; 
+    color:hsl(0, 0%, 90%); 
+    display: block; 
+}
+.dropdown {
+    display: none; 
+    position: absolute; 
+    display: hidden; 
+    border-radius: 0rem .0rem .5rem .5rem; 
+}
+.dropdown li{
+     width: 7.5rem; 
+     
+}
+.dropdown li:hover{
+    background-color: hsl(0, 0%, 90%); 
+   
+}
+header ul li:hover .dropdown{
+    display: block; 
+}
