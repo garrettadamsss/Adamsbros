@@ -1,2 +1,1 @@
-"" 
-"#Adamsbros" 
+The website serves two main functions. The first is to be a space for sample photos for customers. The other is to create a simple way to submit a estimate request. The rest of the website is general information about the company such as contact information and the history of the company. 
