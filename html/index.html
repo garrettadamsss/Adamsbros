@@ -8,14 +8,14 @@
     <body>
          
         <header>
-           <img id = "logo" src = "../adams_logo.png">
+            <img id = "logo" src = "../adams_logo.png">
             <nav>
                 <ul>
                     <li><a href = "home.html">HOME<a></li>
                     <li><a href = "newpools.html">NEW POOLS</a></li>
                     <li><a href = "remodels.html">REMODELS</a></li>
                     <li><a href = "#">MATERIALS</a>
-                        <ul class = "dropdown">
+                        <ul id = "dropdown">
                             <li><a href= "tile.html">TILE</a></li>
                             <li><a href = "coping.html">COPING</a></li>
                             <li><a href = "decking.html">DECKING</a></li>
@@ -27,5 +27,30 @@
                 </ul>
             </nav>
         </header>
+        <div class = "slideshow">
+            <div class = "slides fade">
+                <img src = "../slides_images/Noche coping with color concrete.jpg">
+            </div>
+            <div class = "slides fade">
+                <img src = "../slides_images/commercial.JPG">
+            </div>
+            <div class = "slides fade">
+                <img src = "../slides_images/planter_pool.JPEG">
+            </div>
+
+            <!--Next and previous buttons-->
+            <a class = "prev" onclick = "moveSlides(-1)">&#10094;</a>
+            <a class= "next" onclick="moveSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div class= "dots">
+            <span class = "dot" onclick= "currentSlide(1)"></span>
+            <span class = "dot" onclick = "currentSlide(2)"></span>
+            <span class = "dot" onclick = "currentSlide(3)"></span>
+        </div>
+
+        
+       
     </body>
 </html>
