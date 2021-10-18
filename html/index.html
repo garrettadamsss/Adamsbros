@@ -8,12 +8,35 @@
     <body>
          
         <header>
-            <img id = "logo" src = "../adams_logo.png">
+            <div class = "top-row-wrapper">
+                <p id = "serving">Serving Southern California Since 1981</p>
+                <a href = "index.html"><img id = "logo" src = "../adams_logo.png"></a>
+                <p id = "start">Start Your Project Today!
+                    <a href = "contact.html">FREE ESTIMATE</a>
+                </p>
+            </div>
+
             <nav>
                 <ul>
-                    <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "newpools.html">NEW POOLS</a></li>
-                    <li><a href = "remodels.html">REMODELS</a></li>
+                    
+                    <li><a href = "#" id = "dropdown-button">GALLERY <span>&#9698;</span></a>
+                        <ul id = "dropdown">
+                            <li><a href= "tile.html">NEW POOLS</a></li>
+                            <li><a href = "coping.html">REMODELS</a></li>
+                            <li><a href = "decking.html">TILE&COPING</a></li>
+                            <li><a href = "pebble.html">DECKING</a></li>
+                            <li><a href = "pebble.html">3D PROJECT DESIGNS</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href = "#" id = "dropdown-button">RESOURCES <span>&#9698;</span></a>
+                        <ul id = "dropdown">
+                            <li><a href= "instruction.html">STARTUP INSTRUCTIONS</a></li>
+                            <li><a href = "suppliers.html">SUPPLIERS</a></li>
+                      
+                        </ul>
+                    </li>
+
                     <li><a href = "#" id = "dropdown-button">MATERIALS <span>&#9698;</span></a>
                         <ul id = "dropdown">
                             <li><a href= "tile.html">TILE</a></li>
@@ -22,22 +45,27 @@
                             <li><a href = "pebble.html">PEBBLE</a></li>
                         </ul>
                     </li>
-                    <li><a href = "proposal.html">PROPOSAL</a></li>
-                    <li><a href = "about.html">ABOUT US</a></li>
+                    <li><a href = "contact.html">CONTACT US</a></li>
+                    <li><a href = "about.html">ABOUT</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class = "slideshow">
                 <div class = "slides fade">
-                    <img src = "../slides_images/Noche coping with color concrete.jpg">
+                    <img src = "../slides_images/planter_pool.JPEG">
                 </div>
                 <div class = "slides fade">
                     <img src = "../slides_images/commercial.JPG">
                 </div>
                 <div class = "slides fade">
-                    <img src = "../slides_images/planter_pool.JPEG">
+                    <img src = "../slides_images/thehouse.JPG">
                 </div>
+                <div class = "slides fade">
+                    <img src = "../slides_images/Noche coping with color concrete.jpg">
+                </div>
+                
+                
                 <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
                 <a class= "next" onclick = "plusSlides(1)">&#10095;</a>
             </div>
@@ -59,18 +87,11 @@
              <section id = "services">
              <h2>OUR SERVICES</h2>
              <h3>Remodeling</h3>
-             <h3>Concrete</h3>
+             <h3>New Pool Construction</h3>
              <h3>Pavers</h3>
-             <h3>Commercial</h3>
              </section>
 
-             <div id = "call-wrapper">
-                 <section>
-                 <img src = "../icon_images/phone.png">
-                    <p></p>   
-                 <img src = "../icon_images/email.png">
-                 <p> Contact us for a free estimate</p>
-                </section>
+             
              </div>
              
 
