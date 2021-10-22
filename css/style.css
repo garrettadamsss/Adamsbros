@@ -40,7 +40,7 @@ header{
     font-family: 'Times New Roman', serif; 
     padding: 4rem 0; 
     font-style: italic; 
-    font-size: 1.2rem;    
+    font-size: 1.5rem;    
     text-align: center; 
     color: hsl(0, 0%, 40%);
     width: 30%;
@@ -56,7 +56,7 @@ header{
 #start{
     width: 30%; 
     padding: 4rem 0; 
-    font-size: 1.2rem; 
+    font-size: 1.3rem; 
     text-align: center; 
     color: hsl(0, 0%, 40%);
   
@@ -72,7 +72,7 @@ header{
 /*nav bar*/
 header nav{
     z-index: 5; 
-    height: 4rem;    
+    height: 4.5rem;    
     width: 100%;  
     background-color: hsl(207, 66%, 49%);
 
@@ -169,12 +169,12 @@ header ul li:hover .dropdown{
 }
 
 @-webkit-keyframes fade{
-    from{opacity: .4}
+    from{opacity: .5}
     to {opacity:1}
 }
 
 @keyframes fade {
-    from {opacity: .4}
+    from {opacity: .5}
     to {opacity: 1}
   }
 
@@ -211,26 +211,28 @@ p {
    
 }
 .first-section{
+   padding: 2rem 3rem; 
    min-height: 20rem; 
    margin: 4rem 16rem; 
-   padding: 2rem;
    border: 6px outset hsl(207, 66%, 49%);
    border-radius: 4px; 
 }
 .first-section p{
-    font-size: 1rem;
+    font-size: 1.1rem;
     color:hsl(0, 0%, 20%);
     text-align:left;
-    padding: 2rem; 
+    padding: 3rem 0; 
+
 }
 .first-section, .page-title{
-    text-align: center; 
-    padding: 3rem 0; 
     position: relative; 
     animation-name: slide; 
     animation-duration: 2s; 
 }
-
+.page-title{
+    text-align:center;
+     padding: 3rem 0; 
+}
 @keyframes slide {
     from {left: 3rem; opacity:.3;}
     to {left: 0; opacity: 1}
@@ -240,25 +242,47 @@ p {
 
 /*services section */
 #services{
-    padding: 2rem 10rem;
-
+    padding: 2rem 8rem;
 }
 #services h2{
-    padding: 2rem 0; 
+    padding: 3rem 0; 
+}
+#services table{
+    border-collapse:separate;
+    border-spacing:  1rem; 
+}
+#services td{
+    height: 20rem; 
+    margin: 1rem;  
+   
 }
 .service{
-    width: 30%; 
-    margin: 4rem 0; 
+    text-align: left;
+    margin-right: 0;
+    margin-left: 0; 
     background-color: hsl(202, 50%, 50%);
     border-radius: 4px; 
     background: linear-gradient(to bottom right, hsl(202, 50%, 50%), hsl(202, 50%, 70%) );
 }
 .service h3{
-    padding: 1rem 1rem 0 1rem; 
+    font-size: 1.5rem; 
+    padding: 1rem 2rem; 
+    color: hsl(0, 0%, 20%);
 }
 .service p{
-    padding: 1rem; 
+    padding: 1rem 2rem; 
     color: hsl(0, 0%, 95%); 
+
+}
+#services img{
+    border-radius: 4px; 
+    height: 20rem;
+    width: auto; 
+}
+
+/* about */
+#about-content{
+    padding: 5rem 10rem; 
 }
 
 /* footer */

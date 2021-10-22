@@ -2,7 +2,7 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-setInterval(increaseIndex, 7000);
+setInterval(increaseIndex, 8000);
 function increaseIndex(){
     slideIndex ++; 
     showSlides(slideIndex);
