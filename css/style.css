@@ -21,6 +21,7 @@ body{
 
 }
 
+/*template*/
 /*Header*/
 header{
     font-size: 1.1rem; 
@@ -89,7 +90,6 @@ header nav ul li{
     position: relative; 
 }
 header ul li a{
-    text-decoration: none; 
     font-weight: 500; 
     color: white; 
     display: block; 
@@ -118,6 +118,97 @@ header ul li:hover .dropdown{
     font-size: .6rem; 
 }
 
+/* main content*/
+main{
+    background-color: hsl(0, 0%, 95%);
+    color:hsl(0, 0%, 20%); 
+
+}
+ h1, h2, h3{
+    line-height: 2rem;
+    letter-spacing: .2rem;
+}
+h2 {
+    color: hsl(207, 66%, 49%);
+    font-size: 3rem; 
+    padding-bottom: 1rem; 
+    font-weight: 1000;
+    padding: .5rem 0; 
+}
+p {
+    word-spacing: .1rem;
+    line-height: 1.5rem;
+    color:hsl(0, 0%, 40%);
+}
+a{
+    text-decoration: none; 
+}
+img {
+    border-radius: 4px; 
+}
+.first-section-wrapper{
+    background-image: url("../background_image.jpg");
+    background-color: rgba(255,255,255,0.85);
+    background-blend-mode: lighten;
+    background-image: cover;
+    padding:4rem; 
+    border-top: 6px groove hsla(207, 66%, 50%, .6);
+    border-bottom: 6px groove hsla(207, 66%, 50%, .6);
+   
+}
+.first-section{
+   padding: 2rem 3rem; 
+   min-height: 20rem; 
+   margin: 4rem 16rem; 
+   border: 6px outset hsl(207, 66%, 49%);
+   border-radius: 4px; 
+}
+.first-section p{
+    font-size: 1.1rem;
+    color:hsl(0, 0%, 20%);
+    text-align:left;
+    padding: 3rem 0; 
+
+}
+.first-section, .page-title{
+    position: relative; 
+    animation-name: slide; 
+    animation-duration: 2s; 
+}
+.page-title{
+    text-align:center;
+     padding: 3rem 0; 
+}
+@keyframes slide {
+    from {left: 3rem; opacity:.3;}
+    to {left: 0; opacity: 1}
+}
+/* footer */
+footer {
+    width: 100%;
+    height: 10rem; 
+    background-color: hsl(0, 0%, 60%);
+    border-top: 2px solid black;
+    text-align: center; 
+}
+footer a{
+    display:block; 
+    text-decoration: none; 
+    color: white;
+    font-size: 2rem; 
+    font-weight: 600; 
+    text-align: center; 
+    padding: .5rem;
+    border: 2px solid white; 
+    height: 2rem; 
+    width: 1.5rem; 
+    margin: 2rem auto; 
+}
+footer p{
+    color: white; 
+}
+
+/*index*/
 /*slideshow*/
 .slideshow{
     width: 100%;
@@ -178,68 +269,6 @@ header ul li:hover .dropdown{
     to {opacity: 1}
   }
 
-/* main content*/
-main{
-    background-color: hsl(0, 0%, 95%);
-}
-
- h1, h2, h3{
-    line-height: 2rem;
-    letter-spacing: .2rem;
-}
-h2 {
-    color: hsl(207, 66%, 49%);
-    font-size: 3rem; 
-    padding-bottom: 1rem; 
-    font-weight: 1000;
-    padding: .5rem 0; 
-}
-p {
-    word-spacing: .1rem;
-    line-height: 1.5rem;
-    color:hsl(0, 0%, 40%);
-}
-
-.first-section-wrapper{
-    background-image: url("../background_image.jpg");
-    background-color: rgba(255,255,255,0.85);
-    background-blend-mode: lighten;
-    background-image: cover;
-    padding:4rem; 
-    border-top: 6px groove hsla(207, 66%, 50%, .6);
-    border-bottom: 6px groove hsla(207, 66%, 50%, .6);
-   
-}
-.first-section{
-   padding: 2rem 3rem; 
-   min-height: 20rem; 
-   margin: 4rem 16rem; 
-   border: 6px outset hsl(207, 66%, 49%);
-   border-radius: 4px; 
-}
-.first-section p{
-    font-size: 1.1rem;
-    color:hsl(0, 0%, 20%);
-    text-align:left;
-    padding: 3rem 0; 
-
-}
-.first-section, .page-title{
-    position: relative; 
-    animation-name: slide; 
-    animation-duration: 2s; 
-}
-.page-title{
-    text-align:center;
-     padding: 3rem 0; 
-}
-@keyframes slide {
-    from {left: 3rem; opacity:.3;}
-    to {left: 0; opacity: 1}
-}
-
-
-
 /*services section */
 #services{
     padding: 2rem 8rem;
@@ -275,37 +304,42 @@ p {
 
 }
 #services img{
-    border-radius: 4px; 
+    
     height: 20rem;
     width: auto; 
 }
 
-/* about */
-#about-content{
+/*non-home page template */
+.content-wrapper{
     padding: 5rem 10rem; 
 }
-
-/* footer */
-footer {
-    width: 100%;
-    height: 10rem; 
-    background-color: hsl(0, 0%, 60%);
-    border-top: 2px solid black;
-    text-align: center; 
-}
-footer a{
-    display:block; 
-    text-decoration: none; 
+.content-wrapper a{
     color: white;
-    font-size: 2rem; 
-    font-weight: 600; 
-    text-align: center; 
-    padding: .5rem;
-    border: 2px solid white; 
-    height: 2rem; 
-    width: 1.5rem; 
-    margin: 2rem auto; 
+    padding: 1rem;
+    width: 20rem; 
+    background-color: hsl(202, 91%, 30%);
+    margin: 1rem; 
+
 }
-footer p{
-    color: white; 
+.content-wrapper h3{
+    margin: 2rem; 
+}
+.link-wrapper{
+
+}
+.content-wrapper p{
+    margin: 2rem 0; 
+}
+.content-wrapper img{
+    width: 40%;
+    height: 20rem; 
+    margin: 1rem; 
+}
+.more{
+    font-size: 1.3rem;
+    text-align:center;
+    width: 70%;
+    margin: 3rem auto 0 auto; 
+    padding: 2rem;
+    background-color: white;
 }
