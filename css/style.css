@@ -207,7 +207,7 @@ footer a{
 footer p{
     color: white; 
 }
-
+/*end template */
 /*index*/
 /*slideshow*/
 .slideshow{
@@ -309,6 +309,11 @@ footer p{
     width: auto; 
 }
 
+/* contact page */
+input {
+    display:block;
+    margin: 1rem; 
+}
 /*non-home page template */
 .content-wrapper{
     padding: 5rem 10rem; 
