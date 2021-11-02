@@ -207,7 +207,7 @@ footer a{
 footer p{
     color: white; 
 }
-/*end template */
+
 /*index*/
 /*slideshow*/
 .slideshow{
@@ -310,9 +310,20 @@ footer p{
 }
 
 /* contact page */
-input {
-    display:block;
-    margin: 1rem; 
+#form-wrapper {
+    width: 50%;
+    height: 20rem;
+    padding: 5rem;
+
+    text-align: left; 
+}
+input, select, textarea{
+    display:block; 
+}
+/* confirmation page */
+#confirmation{
+    text-align: center; 
+    font-size: 1.2rem;
 }
 /*non-home page template */
 .content-wrapper{
@@ -329,9 +340,7 @@ input {
 .content-wrapper h3{
     margin: 2rem; 
 }
-.link-wrapper{
 
-}
 .content-wrapper p{
     margin: 2rem 0; 
 }

@@ -64,15 +64,21 @@ if($_POST["name"]) {
         </header>
         <main>
             <div class = "first-section-wrapper">
-                <h2 class = "page-title"> CONTACT US </h2>
+                <h2 class = "page-title"> CONTACT US</h2>
             </div>
             <section id = "form-wrapper">
                 <form method = "post" action = "confirmation.php">
+                    <label for = "name">Name</label>
                     <input type = "text" name = "name">
+                    <br>
+                    <label for = "Address">Address</label>
                     <input type = "text" name = "address">
+                    <br>
+                    <label for = "City">City</label>
                     <input type = "text" name = "city">
-                    <input type = "text" name = "state">
-                    <select>
+                    <br>
+                    <label for = "state">State</label>
+                    <select name = "state">
 	                    <option value="AL">Alabama</option>
 	                    <option value="AK">Alaska</option>
 	                    <option value="AZ">Arizona</option>
@@ -125,9 +131,16 @@ if($_POST["name"]) {
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>	
+                    <br>
+                    <label for = "zip">Zip</label>
                     <input type = "text" name = "zip">
+                    <br>
+                    <label for = "email">Email</label>
                     <input type = "email" name = "email">
-                    <textarea name = "message">Tell us about what you would like to do</textarea>
+                    <br>
+                    <label for = "message">Tell us about what you would like to do</label>
+                    <textarea name = "message"></textarea>
+                    <br>
                     <input type = "submit">
                 </form>
             </section>
