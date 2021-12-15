@@ -1,4 +1,16 @@
-
+<?php
+    if(isset($_POST['submit'])){
+        $name = $_POST['fullname'];
+        $subject = 'from website';
+        $mailFrom = $_POST['email'];
+        $message = $_POST['message'];
+        $mailTo = "spicymustard12ga@aol.com";
+        $headers = "From: " . $mailFrom;          //add extra info
+        $txt = "You have recieved an email from ". $name . ".\n\n" . $message;
+        mail($mailTo, $subject, $txt, $headers);
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang = "en">
     <head>
@@ -40,7 +52,7 @@
                             <li><a href = "turf.html">TURF</a></li>
                         </ul>
                     </li>
-                    <li><a href = "contact.html">CONTACT US</a></li>
+                    <li><a href = "contact.php">CONTACT US</a></li>
                     <li><a href = "about.html">ABOUT</a></li>
                 </ul>
             </nav>

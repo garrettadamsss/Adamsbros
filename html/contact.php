@@ -1,20 +1,3 @@
-<?php
-
-
-if($_POST["name"]) {
-
-
-    mail("garrettadamssss@gmail.com", "Here is the subject line",
-
-
-        $_POST["insert your message here"]. "From: an@email.address");
-
-
-}
-
-
-?>
-
 
 <!DOCTYPE html>
 <html lang = "en">
@@ -62,86 +45,191 @@ if($_POST["name"]) {
                 </ul>
             </nav>
         </header>
-        <main>
+        <main id = "main-contact">
             <div class = "first-section-wrapper">
                 <h2 class = "page-title"> CONTACT US</h2>
             </div>
-            <section id = "form-wrapper">
-                <form method = "post" action = "confirmation.php">
-                    <label for = "name">Name</label>
-                    <input type = "text" name = "name">
-                    <br>
-                    <label for = "Address">Address</label>
-                    <input type = "text" name = "address">
-                    <br>
-                    <label for = "City">City</label>
-                    <input type = "text" name = "city">
-                    <br>
-                    <label for = "state">State</label>
-                    <select name = "state">
-	                    <option value="AL">Alabama</option>
-	                    <option value="AK">Alaska</option>
-	                    <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District Of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                    </select>	
-                    <br>
-                    <label for = "zip">Zip</label>
-                    <input type = "text" name = "zip">
-                    <br>
-                    <label for = "email">Email</label>
-                    <input type = "email" name = "email">
-                    <br>
-                    <label for = "message">Tell us about what you would like to do</label>
-                    <textarea name = "message"></textarea>
-                    <br>
-                    <input type = "submit">
+            <div id = "contact-message">
+                <p> Reach us by filling out the form. We will respond ASAP.</p>
+            </div>
+            <?php
+                function success($array){
+                    $size = count($array);
+                    $i = 0;
+                    while($i < $size){
+                        foreach($array as $x => $value){
+                            if($value == ""){
+                            } else{
+                                return false; 
+                            } 
+                            $i++;
+                        }
+                        return true; 
+                    }
+                }
+                $error = array("fullnameErr" => "", "addressErr" => "", "cityErr" => "", "stateErr" => "", "zipErr" => "", 
+                        "phoneErr" => "", "emailErr" => "", "messageErr" => "");
+                $fullname = $address = $city = $state = $zip = $phone = $email = $message = "";
+                if($_SERVER["REQUEST_METHOD"] == "POST"){
+                    if(empty($_POST["fullname"])){
+                        $error["fullnameErr"] = "Name is required";
+                    } else {
+                        $fullname = $_POST["fullname"];
+                    }
+                    if (empty($_POST["address"])){
+                        $error["addressErr"] = "Address is required";
+                    } else {
+                        $address = $_POST["address"];
+                    }
+                    if(empty($_POST["city"])){
+                        $error["cityErr"] = "City is required";
+                    } else {
+                        $city = $_POST["city"];
+                    }
+                    if(empty($_POST["state"])){
+                        $error["stateErr"] = "State is required";
+                    } else {
+                        $state = $_POST["state"];
+                    }
+                    if(empty($_POST["zip"])){
+                        $error["zipErr"] = "Zip is required";
+                    } else {
+                        $zip = $_POST["zip"];
+                    }
+                    if(empty($_POST["phone"])){
+                        $error["phoneErr"] = "Phone is required";
+                    } else {
+                        $phone = $_POST["phone"];
+                    }
+                    if(empty($_POST["email"])){
+                        $error["emailErr"] = "Email is required";
+                    } else {
+                        $email = $_POST["email"];
+                    }
+                    if(empty($_POST["message"])){
+                        $error["messageErr"] = "Message is required";
+                    } else {
+                        $message = $_POST["message"];
+                    }
+                }
+            ?>
+            <section id = "form-container">
+                <form class = "form"  name = "myform" method = "post" action = "confirmation.php">
+                    <div class = "form-control name">
+                        <label for = "fullname">Name</label> <span class = "phpErr"> <?php echo $error["fullnameErr"];?></span>
+                        <input type = "text" name = "fullname" value = "<?php echo $fullname;?>">
+                        <p>Name is required!</p> 
+                        
+            
+                    </div>
+                    
+                    <div class = "form-control">
+                        <label for = "address">Address</label> <span class = "phpErr"> <?php echo $error["addressErr"];?></span>
+                        <input type = "text" name = "address" value = "<?php echo $address;?>">
+                        <p>Address is required!</p>
+                    </div>  
+                    
+                    
+                    <div class = "form-control city" >
+                        <label for = "city">City</label> <span class = "phpErr"> <?php echo $error["cityErr"];?></span>
+                        <input type = "text" name = "city" value = "<?php echo $city; ?>">
+                        <p>City is required!</p>
+                    </div>
+
+                
+
+                    <div class = "form-control state">
+                        <label for = "state">State</label> <span class = "phpErr"><?php echo $error["stateErr"]; ?></span>
+                        <select name = "state" value = "<?php echo $state; ?>">
+                            <option value="" >-Select State-</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>	
+                        <p>State is required</p>
+                    </div>
+                    
+                    <div class = "form-control zip">
+                        <label for = "zip">Zip</label> <span class = "phpErr"><?php echo $error["zipErr"];?></span>
+                        <input type = "text" name = "zip" value = "<?php echo $zip; ?>">
+                        <p>Zip is required</p>
+                    </div>
+                   
+                    
+                    <div class = "form-control phone">
+                        <label for = "phone">Phone</label> <span class = "phpErr"><?php echo $error["phoneErr"];?></span>
+                        <input type = "text" name = "phone" value = "<?php echo $phone; ?>">
+                        <p>Phone is required</p>
+                    </div>
+                   
+                    <div class = "form-control email">
+                        <label for = "email">Email</label> <span class = "phpErr"><?php echo $error["emailErr"];?></span>
+                        <input type = "email" name = "email" value = "<?php echo $email; ?>">
+                        <p>Email is required</p>
+                    </div>
+                   
+                    
+                    <div class = "form-control">
+                        <label for = "message">Tell us about what you would like to do</label> <span class = "phpErr"><?php echo $error["messageErr"];?></span>
+                        <textarea name = "message" ><?php echo $message; ?></textarea>
+                        <p>A message is required</p> 
+                    </div>
+                    <script src = "../js/validation.js" type = "text/javascript"></script>
+                    <input type = "submit" id = "submit">
+                    <?php 
+                        if($_SERVER["REQUEST_METHOD"] == "POST"){
+                            success($error);
+                
+                        }
+                    ?>
                 </form>
             </section>
             
