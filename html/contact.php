@@ -14,7 +14,7 @@
                 <p id = "serving">Serving Southern California Since 1981</p>
                 <a href = "index.html"><img id = "logo" src = "../adams_logo.png" alt = "logo"></a>
                 <p id = "start">Start Your Project Today!
-                    <a href = "contact.html">FREE ESTIMATE</a>
+                    <a href = "contact.php">FREE ESTIMATE</a>
                 </p>
             </div>
 
@@ -23,11 +23,12 @@
                     <li><a href = "index.html">HOME</a></li>
                     <li><a href = "#" class = "dropdown-button">GALLERY <span>&#9698;</span></a>
                         <ul class = "dropdown">
-                            <li><a href= "tile.html">NEW POOLS</a></li>
-                            <li><a href = "coping.html">REMODELS</a></li>
-                            <li><a href = "decking.html">TILE&COPING</a></li>
-                            <li><a href = "pebble.html">DECKING</a></li>
-                            <li><a href = "pebble.html">3D PROJECT DESIGNS</a></li>
+                            <li><a href= "g_newpools.html">NEW POOLS</a></li>
+                            <li><a href = "g_remodels.html">REMODELS</a></li>
+                            <li><a href = "g_coping.html">TILE&COPING</a></li>
+                            <li><a href = "g_decking.html">DECKING</a></li>
+                            <li><a href = "g_3d.html">3D PROJECT DESIGNS</a></li>
+                            <li><a href = "g_miscellaneous.html">MISCELLANEOUS</a></li>
                         </ul>
                     </li>
 
@@ -40,7 +41,7 @@
                             <li><a href = "turf.html">TURF</a></li>
                         </ul>
                     </li>
-                    <li><a href = "contact.html">CONTACT US</a></li>
+                    <li><a href = "contact.php">CONTACT US</a></li>
                     <li><a href = "about.html">ABOUT</a></li>
                 </ul>
             </nav>
@@ -53,6 +54,7 @@
                 <p> Reach us by filling out the form. We will respond ASAP.</p>
             </div>
             <?php
+                
                 function success($array){
                     $size = count($array);
                     $i = 0;
@@ -67,54 +69,75 @@
                         return true; 
                     }
                 }
+                function cleanData($data) {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                  }
+
                 $error = array("fullnameErr" => "", "addressErr" => "", "cityErr" => "", "stateErr" => "", "zipErr" => "", 
                         "phoneErr" => "", "emailErr" => "", "messageErr" => "");
                 $fullname = $address = $city = $state = $zip = $phone = $email = $message = "";
+    
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(empty($_POST["fullname"])){
                         $error["fullnameErr"] = "Name is required";
                     } else {
-                        $fullname = $_POST["fullname"];
+                        $fullname = cleanData($_POST["fullname"]);
                     }
                     if (empty($_POST["address"])){
                         $error["addressErr"] = "Address is required";
                     } else {
-                        $address = $_POST["address"];
+                        $address = cleanData($_POST["address"]);
                     }
                     if(empty($_POST["city"])){
                         $error["cityErr"] = "City is required";
                     } else {
-                        $city = $_POST["city"];
+                        $city = cleanData($_POST["city"]);
                     }
                     if(empty($_POST["state"])){
                         $error["stateErr"] = "State is required";
                     } else {
-                        $state = $_POST["state"];
+                        $state = cleanData($_POST["state"]);
                     }
                     if(empty($_POST["zip"])){
                         $error["zipErr"] = "Zip is required";
                     } else {
-                        $zip = $_POST["zip"];
+                        $zip = cleanData($_POST["zip"]);
                     }
                     if(empty($_POST["phone"])){
                         $error["phoneErr"] = "Phone is required";
                     } else {
-                        $phone = $_POST["phone"];
+                        $phone = cleanData($_POST["phone"]);
                     }
                     if(empty($_POST["email"])){
                         $error["emailErr"] = "Email is required";
                     } else {
-                        $email = $_POST["email"];
+                        $email = cleanData($_POST["email"]);
                     }
                     if(empty($_POST["message"])){
                         $error["messageErr"] = "Message is required";
                     } else {
-                        $message = $_POST["message"];
+                        $message = cleanData($_POST["message"]);
                     }
+                    if(success($error)){
+                        $subject = 'Message From Website';
+                        $mailTo = "garrettadamssss@gmail.com";
+                        $headers = "From: " . $email;          
+                        $body = "You have recieved a message from ". $fullname . "\n\t-Basic Information-" . "\n\tAddress: " . $address .
+                        "\n\tCity: " . $city . "\n\tState: " . $state . "\n\tZip: " . $zip . "\n\tPhone Number: " . $phone . 
+                        "\n\tEmail: " . $email . "\n\n" . $message;
+                        
+                        mail($mailTo, $subject, $body, $headers);
+                        header('Location: confirmation.php');
+                        exit();
+                    } 
                 }
             ?>
+
             <section id = "form-container">
-                <form class = "form"  name = "myform" method = "post" action = "confirmation.php">
+                <form class = "form"  name = "myform" method = "post" action = "contact.php">
                     <div class = "form-control name">
                         <label for = "fullname">Name</label> <span class = "phpErr"> <?php echo $error["fullnameErr"];?></span>
                         <input type = "text" name = "fullname" value = "<?php echo $fullname;?>">
@@ -222,14 +245,9 @@
                         <textarea name = "message" ><?php echo $message; ?></textarea>
                         <p>A message is required</p> 
                     </div>
+
                     <script src = "../js/validation.js" type = "text/javascript"></script>
-                    <input type = "submit" id = "submit">
-                    <?php 
-                        if($_SERVER["REQUEST_METHOD"] == "POST"){
-                            success($error);
-                
-                        }
-                    ?>
+                    <input type = "submit" id = "submit" name = "submit">
                 </form>
             </section>
             

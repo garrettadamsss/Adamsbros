@@ -68,6 +68,12 @@ header{
     color:hsl(0, 0%, 20%);
     border: 2px solid hsl(0, 0%, 20%);
     margin-top: .5rem; 
+    border-radius: 5px; 
+}
+#start a:hover {
+    background-color: hsl(202, 50%, 70%);
+    color: white; 
+    border: none; 
 }
 
 /*nav bar*/
@@ -93,6 +99,7 @@ header ul li a{
     font-weight: 500; 
     color: white; 
     display: block; 
+ 
 }
 
 .dropdown {
@@ -107,7 +114,7 @@ header ul li a{
     
 }
 .dropdown li:hover{
-    background-color: hsl(0, 0%, 40%); 
+    background-color: hsl(207, 66%, 60%);
    
 }
 header ul li:hover .dropdown{
@@ -144,7 +151,7 @@ a{
     text-decoration: none; 
 }
 img {
-    border-radius: 4px; 
+    border-radius: 5px; 
 }
 .first-section-wrapper{
     background-image: url("../background_image.jpg");
@@ -176,7 +183,7 @@ img {
     animation-duration: 2s; 
 }
 .page-title{
-    text-align:center;
+     text-align:center;
      padding: 3rem 0; 
 }
 @keyframes slide {
@@ -270,6 +277,7 @@ footer p{
   }
 
 /*services section */
+
 #services{
     padding: 2rem 8rem;
 }
@@ -279,9 +287,11 @@ footer p{
 #services table{
     border-collapse:separate;
     border-spacing:  1rem; 
+    margin: 0 auto; 
 }
 #services td{
     height: 20rem; 
+    width:  25rem; 
     margin: 1rem;  
    
 }
@@ -304,9 +314,12 @@ footer p{
 
 }
 #services img{
-    
     height: 20rem;
-    width: auto; 
+    width: 25rem; 
+}
+/*about page */
+#about {
+    margin: 0 10rem; 
 }
 
 /* contact page */
@@ -345,7 +358,7 @@ form {
 }
 .form-control.city {
    float: left; 
-   margin: 0 1rem 1.3rem 0; 
+   margin: 0 1.5rem 1.3rem 0; 
 
 }
 .form-control.state {
@@ -356,7 +369,7 @@ form {
 .form-control.zip {
     clear: both; 
     float: left; 
-    margin: 0 1rem 1.3rem 0; 
+    margin: 0 1.5rem 1.3rem 0; 
     
 }
 .form-control.phone {
@@ -375,7 +388,8 @@ input, textarea, select{
 
 }
 select {
-    height: 2.1rem; 
+    height: 2.2rem; 
+    width: 13rem; 
 }
 textarea {
     height: 4rem; 
@@ -410,26 +424,9 @@ form p{
     background-color: hsl(202, 60%, 70%);
 }
 
-/* confirmation page */
-#confirmation{
-    text-align: center; 
-    font-size: 1.2rem;
-}
-/*non-home page template */
+/*Materials*/
 .content-wrapper{
     padding: 5rem 10rem; 
-}
-.content-wrapper h3{
-    margin: 2rem; 
-}
-
-.content-wrapper p{
-    margin: 2rem 0; 
-}
-.content-wrapper img{
-    width: 40%;
-    height: 20rem; 
-    margin: 1rem; 
 }
 .more{
     font-size: 1.3rem;
@@ -438,19 +435,91 @@ form p{
     margin: 3rem auto 0 auto; 
     padding: 2rem;
     background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-.content-wrapper a {
-    padding: 1rem;
-    font-size: 1.3rem;
+.more a {
+    padding: .5rem;
+    font-size: 1.2rem;
     background: none;
     font-weight: 550; 
     border: 2px solid hsl(207, 66%, 40%);
     color: hsl(207, 66%, 40%);
     border-radius: 10px;
     transition: all .5s; 
+    
 }
-.content-wrapper a:hover {
+.more a:hover {
     background-color: hsl(202, 50%, 70%);
     border: black; 
     color: white; 
+}
+.more p {
+    margin: 1rem; 
+}
+.content-wrapper h3 {
+    text-decoration: underline; 
+    font-size: 2rem; 
+    text-align: left;
+}
+.img-wrapper {
+    text-align: center; 
+
+}
+.img-wrapper img {
+    height: 25rem;
+    width: auto; 
+    margin: 1rem; 
+}
+.link-wrapper {
+    text-align: center; 
+}
+.link-wrapper a img{
+    background-color: white; 
+    padding: 2rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    height: 8rem;
+    width: 8rem; 
+}
+.supplier {
+    display: inline-block;
+    margin: 3rem 4rem; 
+    vertical-align:middle; 
+}
+.supplier p{
+    width: 12rem; 
+    height: 5rem;
+    margin: 0; 
+
+}
+#recomendation {
+    margin: 0 10rem; 
+}
+#coping{
+    margin: 3rem 0; 
+}
+#resource {
+    margin: 3rem 0; 
+}
+
+/* gallery */
+.gallery-content {
+    padding: 5rem; 
+}
+.gallery-section {
+    color: hsl(207, 66%, 49%);
+    text-align: center; 
+    font-size: 2rem; 
+    padding: 1rem 0; 
+    position: relative; 
+    animation-name: slide; 
+    animation-duration: 2s; 
+}
+.gallery-imgs {
+    text-align: center; 
+}
+.gallery-imgs img{
+    height: 20rem;
+    width: auto; 
+    margin: .5rem; 
+    vertical-align: middle; 
 }

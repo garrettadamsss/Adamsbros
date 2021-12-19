@@ -1,16 +1,4 @@
-<?php
-    if(isset($_POST['submit'])){
-        $name = $_POST['fullname'];
-        $subject = 'from website';
-        $mailFrom = $_POST['email'];
-        $message = $_POST['message'];
-        $mailTo = "spicymustard12ga@aol.com";
-        $headers = "From: " . $mailFrom;          //add extra info
-        $txt = "You have recieved an email from ". $name . ".\n\n" . $message;
-        mail($mailTo, $subject, $txt, $headers);
-        
-    }
-?>
+
 <!DOCTYPE html>
 <html lang = "en">
     <head>
@@ -26,7 +14,7 @@
                 <p id = "serving">Serving Southern California Since 1981</p>
                 <a href = "index.html"><img id = "logo" src = "../adams_logo.png" alt = "logo"></a>
                 <p id = "start">Start Your Project Today!
-                    <a href = "contact.html">FREE ESTIMATE</a>
+                    <a href = "contact.php">FREE ESTIMATE</a>
                 </p>
             </div>
 
@@ -35,11 +23,13 @@
                     <li><a href = "index.html">HOME</a></li>
                     <li><a href = "#" class = "dropdown-button">GALLERY <span>&#9698;</span></a>
                         <ul class = "dropdown">
-                            <li><a href= "tile.html">NEW POOLS</a></li>
-                            <li><a href = "coping.html">REMODELS</a></li>
-                            <li><a href = "decking.html">TILE&COPING</a></li>
-                            <li><a href = "pebble.html">DECKING</a></li>
-                            <li><a href = "pebble.html">3D PROJECT DESIGNS</a></li>
+                        <li><a href= "g_newpools.html">NEW POOLS</a></li>
+                        <li><a href = "g_remodels.html">REMODELS</a></li>
+                        <li><a href = "g_coping.html">TILE&COPING</a></li>
+                        <li><a href = "g_decking.html">DECKING</a></li>
+                        <li><a href = "g_3d.html">3D PROJECT DESIGNS</a></li>
+                        <li><a href = "g_miscellaneous.html">MISCELLANEOUS</a></li>
+                          
                         </ul>
                     </li>
 
@@ -64,8 +54,6 @@
             <div class = "content-wrapper">
                 <p id = "confirmation">Your message has been sent. We will reach out to you as soon as possible!</p>
             </div>
-            
-            
            
         </main>
         <footer>
