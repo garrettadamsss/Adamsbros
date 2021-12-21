@@ -5,20 +5,42 @@
 html{
     font-size: 16px; 
 }
-@media screen and (max-width: 680px){
+@media screen and (max-width: 1200px){
     html{
-        font-size: 10px;
     }
-    .slideshow{
+    #serving {
         display: none; 
     }
+    #start {
+        display: none;
+    }
 }
+@media screen and (max-width: 992px){
+    html{
+    }
+    #services {
+        padding: 2rem 4rem; 
+    }
+}
+@media screen and (max-width: 768px){
+    html{
+
+    }
+    #services{
+        padding: 2rem 0; 
+    }
+}
+@media screen and (max-width: 480px){
+    html{
+
+    }
+}
+
 body{
     margin-left: auto; 
     margin-right: auto; 
     font-family: 'Montserrat', sans-serif; 
     text-align: justify;
-
 }
 
 /*template*/
@@ -280,18 +302,20 @@ footer p{
 
 #services{
     padding: 2rem 8rem;
+    max-width: 100%;
+
 }
 #services h2{
-    padding: 3rem 0; 
+    margin: 3rem 0; 
 }
 #services table{
     border-collapse:separate;
-    border-spacing:  1rem; 
+    border-spacing: 1rem; 
     margin: 0 auto; 
 }
 #services td{
     height: 20rem; 
-    width:  25rem; 
+    width: 15rem; 
     margin: 1rem;  
    
 }
