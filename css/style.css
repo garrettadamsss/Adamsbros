@@ -343,9 +343,6 @@ footer p{
 }
 
 /* contact page */
-#main-contact {
-    height: 70rem; 
-}
 #contact-message {
     margin: 20rem 10rem;
     text-align: center;
@@ -484,6 +481,7 @@ form p{
 }
 .img-wrapper {
     text-align: center; 
+    width: 100%; 
 
 }
 .img-wrapper img {
@@ -539,7 +537,7 @@ form p{
     text-align: center; 
 }
 .gallery-imgs img{
-    height: 20rem;
+    height: 15rem;
     width: auto; 
     margin: .5rem; 
     vertical-align: middle; 
@@ -560,6 +558,19 @@ form p{
     #services {
         padding: 2rem 2rem; 
     }
+    #contact-message{
+        float: none; 
+        margin: 5rem auto; 
+        width: 50%; 
+    }
+    #form-container {
+        float: none; 
+    }
+    form {
+        width: 90%; 
+        margin: 5rem auto; 
+    }
+
 }
 @media only screen and (max-width: 992px){
     .slideshow {
@@ -643,6 +654,12 @@ form p{
     #about {
         margin: 0 5rem; 
     }   
+    .content-wrapper{
+        padding: 5rem 5rem; 
+    }
+    .gallery-content{
+        padding: 5rem 2rem;
+    }
 }
 @media only screen and (max-width: 768px){
     .first-section{
@@ -658,6 +675,18 @@ form p{
     #about {
         margin: 0 0; 
     }   
+    .gallery-content {
+        padding: 5rem 1rem; 
+    }
+    .content-wrapper {
+        padding:  5rem 2rem; 
+    }
+    .img-wrapper img {
+        height: 20rem; 
+    }
+    .more {
+        width: 80%; 
+    }
 }
 @media only screen and (max-width: 550px){
     .slideshow {
@@ -667,6 +696,12 @@ form p{
         height: 20rem; 
     }
     .content-wrapper {
-        padding:  5rem 5rem; 
+        padding: 5rem 1rem; 
+    }
+    .img-wrapper img {
+        height: 15rem; 
+    }
+    .more {
+        width: 90%; 
     }
 }
