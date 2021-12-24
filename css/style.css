@@ -150,8 +150,7 @@ img {
     border-radius: 5px; 
 }
 .first-section-wrapper{
-    background-image: url("../background_image.jpg");
-    background-color: rgba(255,255,255,0.85);
+    background-image: url("../background_image_copy.png");
     background-blend-mode: lighten;
     background-image: cover;
     padding: 4rem; 
