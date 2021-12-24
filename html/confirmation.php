@@ -9,31 +9,32 @@
     </head>
     <body>
          
-        <header id = "top">
+    <header id = "top">
             <div class = "top-row-wrapper">
+                
                 <p id = "serving">Serving Southern California Since 1981</p>
                 <a href = "index.html"><img id = "logo" src = "../adams_logo.png" alt = "logo"></a>
                 <p id = "start">Start Your Project Today!
-                    <a href = "contact.php">FREE ESTIMATE</a>
+                    <a href = "contact.php" >FREE ESTIMATE</a>
                 </p>
+                 <img src = "../menu_icon.png" id = "menu-icon" onclick = "toggleMenu()">
             </div>
-
-            <nav>
-                <ul>
+           
+            <nav id = "navbar">
+               
+                <ul id = "menuList">
                     <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "#" class = "dropdown-button">GALLERY <span>&#9698;</span></a>
+                    <li class = "dropdown-button"><a href = "#">GALLERY <span>&#9698;</span></a>
                         <ul class = "dropdown">
-                        <li><a href= "g_newpools.html">NEW POOLS</a></li>
-                        <li><a href = "g_remodels.html">REMODELS</a></li>
-                        <li><a href = "g_coping.html">TILE&COPING</a></li>
-                        <li><a href = "g_decking.html">DECKING</a></li>
-                        <li><a href = "g_3d.html">3D PROJECT DESIGNS</a></li>
-                        <li><a href = "g_miscellaneous.html">MISCELLANEOUS</a></li>
-                          
+                            <li><a href= "g_newpools.html">NEW POOLS</a></li>
+                            <li><a href = "g_remodels.html">REMODELS</a></li>
+                            <li><a href = "g_coping.html">TILE&COPING</a></li>
+                            <li><a href = "g_decking.html">DECKING</a></li>
+                            <li><a href = "g_3d.html">3D PROJECT DESIGNS</a></li>
+                            <li><a href = "g_miscellaneous.html">MISCELLANEOUS</a></li>
                         </ul>
                     </li>
-
-                    <li><a href = "#" class = "dropdown-button">MATERIALS <span>&#9698;</span></a>
+                    <li class = "dropdown-button"><a href = "#" >MATERIALS <span>&#9698;</span></a>
                         <ul class = "dropdown">
                             <li><a href= "tile.html">TILE</a></li>
                             <li><a href = "coping.html">COPING</a></li>
@@ -44,8 +45,10 @@
                     </li>
                     <li><a href = "contact.php">CONTACT US</a></li>
                     <li><a href = "about.html">ABOUT</a></li>
+                   
                 </ul>
             </nav>
+            
         </header>
         <main>
             <div class = "first-section-wrapper">
@@ -60,6 +63,6 @@
             <a href = "#top"> &uarr; </a>
             <p id = "rights">Adams Brothers Pools -All rights reserved @2021</p> 
         </footer>
-        
+        <script src = "../js/menu.js" type = "text/javascript"></script> 
     </body>
 </html> 

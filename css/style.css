@@ -1,39 +1,10 @@
 * {
     margin: 0; 
     padding: 0; 
+    box-sizing: border-box;
 }
 html{
     font-size: 16px; 
-}
-@media screen and (max-width: 1200px){
-    html{
-    }
-    #serving {
-        display: none; 
-    }
-    #start {
-        display: none;
-    }
-}
-@media screen and (max-width: 992px){
-    html{
-    }
-    #services {
-        padding: 2rem 4rem; 
-    }
-}
-@media screen and (max-width: 768px){
-    html{
-
-    }
-    #services{
-        padding: 2rem 0; 
-    }
-}
-@media screen and (max-width: 480px){
-    html{
-
-    }
 }
 
 body{
@@ -47,7 +18,6 @@ body{
 /*Header*/
 header{
     font-size: 1.1rem; 
-    height: 13rem;
     background-color: white;
     z-index: 10;
 }
@@ -55,9 +25,8 @@ header{
 /* top row*/
 .top-row-wrapper{
     display: flex; 
-    justify-content: center;
-    white-space: nowrap; 
-
+    justify-content: center; 
+    white-space: nowrap;
 }
 #serving {
     font-family: 'Times New Roman', serif; 
@@ -97,17 +66,22 @@ header{
     color: white; 
     border: none; 
 }
+#menu-icon {
+    display: none; 
+    cursor: pointer;
+    height: 2rem; 
+    margin: auto 4rem; 
 
+}
 /*nav bar*/
 header nav{
-    z-index: 5; 
-    height: 4.5rem;    
+    z-index: 5;  
     width: 100%;  
     background-color: hsl(207, 66%, 49%);
 
 }
 header nav ul{
-  text-align:center;  
+    text-align:center;  
 
 }
 header nav ul li{
@@ -131,7 +105,7 @@ header ul li a{
     z-index: 3;  
 }
 .dropdown li{
-     width: 9rem; 
+     width: 11rem; 
      padding: 1rem 1rem; 
     
 }
@@ -180,15 +154,16 @@ img {
     background-color: rgba(255,255,255,0.85);
     background-blend-mode: lighten;
     background-image: cover;
-    padding:4rem; 
+    padding: 4rem; 
     border-top: 6px groove hsla(207, 66%, 50%, .6);
     border-bottom: 6px groove hsla(207, 66%, 50%, .6);
    
 }
 .first-section{
+   width: 60%; 
+   margin: 0 auto; 
    padding: 2rem 3rem; 
    min-height: 20rem; 
-   margin: 4rem 16rem; 
    border: 6px outset hsl(207, 66%, 49%);
    border-radius: 4px; 
 }
@@ -196,13 +171,14 @@ img {
     font-size: 1.1rem;
     color:hsl(0, 0%, 20%);
     text-align:left;
-    padding: 3rem 0; 
+    padding-top: 2rem; 
 
 }
 .first-section, .page-title{
     position: relative; 
     animation-name: slide; 
     animation-duration: 2s; 
+    
 }
 .page-title{
      text-align:center;
@@ -214,6 +190,7 @@ img {
 }
 /* footer */
 footer {
+    clear: both; 
     width: 100%;
     height: 10rem; 
     background-color: hsl(0, 0%, 60%);
@@ -229,8 +206,8 @@ footer a{
     text-align: center; 
     padding: .5rem;
     border: 2px solid white; 
-    height: 2rem; 
-    width: 1.5rem; 
+    height: 4rem; 
+    width: 4rem; 
     margin: 2rem auto; 
 }
 footer p{
@@ -249,8 +226,9 @@ footer p{
     display: none; 
 }
 .slides img{
-   width: 100%;
-   height: 40rem; 
+    border-radius: 0; 
+    width: 100%;
+    height: 40rem; 
 }
 
 /* arrows */
@@ -301,49 +279,68 @@ footer p{
 /*services section */
 
 #services{
-    padding: 2rem 8rem;
-    max-width: 100%;
-
+    padding: 2rem 4rem; 
+    width: 100%; 
+    text-align: center; 
 }
 #services h2{
-    margin: 3rem 0; 
-}
-#services table{
-    border-collapse:separate;
-    border-spacing: 1rem; 
-    margin: 0 auto; 
-}
-#services td{
-    height: 20rem; 
-    width: 15rem; 
-    margin: 1rem;  
-   
+    margin: 4rem 0; 
 }
 .service{
+    margin: 1rem 0;
+}
+.service::after {
+    content: "";
+    clear: both;
+    display: table; 
+}
+.service-content{
+    float: left; 
+    height: 25rem;
+    width: 33%; 
     text-align: left;
-    margin-right: 0;
-    margin-left: 0; 
-    background-color: hsl(202, 50%, 50%);
     border-radius: 4px; 
     background: linear-gradient(to bottom right, hsl(202, 50%, 50%), hsl(202, 50%, 70%) );
 }
-.service h3{
+.service-content h3{
     font-size: 1.5rem; 
-    padding: 1rem 2rem; 
+    padding: 4rem 2rem 2rem 2rem; 
     color: hsl(0, 0%, 20%);
 }
-.service p{
+.service-content p{
     padding: 1rem 2rem; 
+    line-height: 2rem;
     color: hsl(0, 0%, 95%); 
-
+    vertical-align: middle;
 }
-#services img{
-    height: 20rem;
-    width: 25rem; 
+.service-imgs {
+    width: 66%; 
+    float: left; 
+}
+.service-imgs img{
+    height: 25rem;
+    width: 49%; 
 }
 /*about page */
 #about {
     margin: 0 10rem; 
+    position: relative; 
+}
+#about::after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(hsl(207, 60%, 34%), hsl(202, 82%, 69%) );
+    position: absolute;
+    left: -20px;
+    top: 5px; 
+
+}
+#about h3 {
+    margin-bottom: 2rem; 
+    padding-top: .5rem; 
+    text-decoration: none;
+    color:hsl(0, 0%, 20%);
 }
 
 /* contact page */
@@ -484,6 +481,7 @@ form p{
     text-decoration: underline; 
     font-size: 2rem; 
     text-align: left;
+    color:hsl(0, 0%, 30%);
 }
 .img-wrapper {
     text-align: center; 
@@ -501,8 +499,8 @@ form p{
     background-color: white; 
     padding: 2rem;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    height: 8rem;
-    width: 8rem; 
+    height: 10rem;
+    width: 10rem; 
 }
 .supplier {
     display: inline-block;
@@ -546,4 +544,130 @@ form p{
     width: auto; 
     margin: .5rem; 
     vertical-align: middle; 
+}
+
+
+/* Media Querries */
+@media only screen and (max-width: 1200px){
+    #serving {
+        display: none; 
+    }
+    #start {
+        display: none;
+    }
+    .first-section{
+        width: 85%; 
+    }
+    #services {
+        padding: 2rem 2rem; 
+    }
+}
+@media only screen and (max-width: 992px){
+    .slideshow {
+        height: 25rem; 
+    }
+    .slideshow img {
+        height: 25rem; 
+    }
+    .first-section-wrapper{
+        padding: 2rem; 
+    }
+    .first-section{
+        width: 90%; 
+    }
+    .first-section p{
+        padding: 2rem 0; 
+    }
+    .top-row-wrapper {
+        justify-content: space-between;
+    }
+    #menu-icon {
+        display: block; 
+    }
+    #logo {
+        margin: 0 2rem; 
+        height: 6rem;
+        width: auto; 
+    }
+    #navbar {
+        display: none; 
+        border-radius: 2px; 
+        transition: all 1s; 
+        width: 100%; 
+        position: absolute; 
+        z-index: 10;
+        font-size: 12px; 
+        background: linear-gradient(to bottom right, hsl(202, 50%, 50%), hsl(202, 50%, 70%) );
+    }
+    #mainlist {
+        text-align: start;
+    }
+    header nav ul li {
+        margin: 0 3rem; 
+        padding: .5rem 0; 
+        text-align: start;
+        position: static; 
+        display: block; 
+        width: 100%; 
+    }
+    header nav ul li:hover {
+        background-color: hsl(207, 66%, 60%);
+    }
+    .dropdown-button:hover {
+        background-color: inherit;
+    }
+    .dropdown {
+        background: inherit; 
+        display: block; 
+        position: static; 
+    }
+    .dropdown li {
+        padding: .5rem 0; 
+        margin-left: 4rem; 
+        width: 100%; 
+    }
+    .service-content {
+        text-align: center;
+        width: 100%; 
+        height: 15rem; 
+    }
+    .service-content h3 {
+        padding-bottom: 1rem; 
+    }
+    .service-imgs {
+        height: 15rem; 
+        width: 100%; 
+    }
+    .service-imgs img {
+        height: 15rem; 
+    }
+    #about {
+        margin: 0 5rem; 
+    }   
+}
+@media only screen and (max-width: 768px){
+    .first-section{
+        width: 95%; 
+    }
+    .first-section h2 {
+        font-size: 2rem; 
+    }
+    .service-content h3 {
+        padding-bottom: 0; 
+        padding-top: 2rem; 
+    }
+    #about {
+        margin: 0 0; 
+    }   
+}
+@media only screen and (max-width: 550px){
+    .slideshow {
+        height: 20rem; 
+    }
+    .slideshow img {
+        height: 20rem; 
+    }
+    .content-wrapper {
+        padding:  5rem 5rem; 
+    }
 }
