@@ -596,7 +596,7 @@ form p{
         position: absolute; 
         z-index: 10;
         font-size: 12px; 
-        background: linear-gradient(to bottom right, hsl(202, 50%, 50%), hsl(202, 50%, 70%) );
+        background: linear-gradient(to bottom right, hsl(205, 55%, 50%), hsl(202, 50%, 70%) );
     }
     #mainlist {
         text-align: start;
