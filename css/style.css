@@ -148,6 +148,7 @@ a{
 }
 img {
     border-radius: 5px; 
+    max-width: 95%; 
 }
 .first-section-wrapper{
     background-image: url("../background_image_copy.png");
@@ -487,6 +488,7 @@ form p{
 .img-wrapper img {
     height: 25rem;
     width: auto; 
+    max-width: 90%; 
     margin: 1rem; 
 }
 .link-wrapper {
@@ -673,7 +675,7 @@ form p{
         padding-top: 2rem; 
     }
     #about {
-        margin: 0 0; 
+        margin: 0 1rem; 
     }   
     .gallery-content {
         padding: 5rem 1rem; 
@@ -703,5 +705,9 @@ form p{
     }
     .more {
         width: 90%; 
+        font-size: 1.2rem; 
+    }
+    .more a {
+        font-size: 1rem; 
     }
 }
