@@ -304,7 +304,7 @@ footer p{
 }
 .service-content h3{
     font-size: 1.5rem; 
-    padding: 4rem 2rem 2rem 2rem; 
+    padding: 4rem 2rem 3rem 2rem; 
     color: hsl(0, 0%, 20%);
 }
 .service-content p{
@@ -638,6 +638,14 @@ form p{
         margin-left: 4rem; 
         width: 100%; 
     }
+    #services{
+        padding: 2rem 1rem; 
+        width: 100%; 
+        text-align: center; 
+    }
+    .service {
+        width: 100%; 
+    }
     .service-content {
         text-align: center;
         width: 100%; 
@@ -669,6 +677,14 @@ form p{
     }
     .first-section h2 {
         font-size: 2rem; 
+    }
+    #services{
+        padding: 2rem 0; 
+        width: 100%; 
+        text-align: center; 
+    }
+    .service-imgs img {
+
     }
     .service-content h3 {
         padding-bottom: 0; 
