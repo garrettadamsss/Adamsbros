@@ -42,7 +42,6 @@ header{
     width: 20rem; 
     height: auto; 
     margin: 0 5rem; 
-    box-shadow: 1px; 
 
 }
 #start{
@@ -70,7 +69,7 @@ header{
     display: none; 
     cursor: pointer;
     height: 2rem; 
-    margin: auto 4rem; 
+    margin: auto 3rem; 
 
 }
 /*nav bar*/
@@ -128,7 +127,6 @@ main{
 
 }
  h1, h2, h3{
-    line-height: 2rem;
     letter-spacing: .2rem;
 }
 h2 {
@@ -228,6 +226,7 @@ footer p{
 .slides img{
     border-radius: 0; 
     width: 100%;
+    max-width: 100%;
     height: 40rem; 
 }
 
@@ -344,28 +343,32 @@ footer p{
 }
 
 /* contact page */
+
 #contact-message {
-    margin: 20rem 10rem;
+    float: left; 
+    width: 50%; 
     text-align: center;
     font-size: 2rem; 
-    float: left; 
-    width: 30%;
 }
 #contact-message p {
+    margin: 20rem 10rem; 
     color: hsl(202, 60%, 50%);
     line-height: 2rem; 
+    max-width: 80%;
 
 }
 #form-container {
-    float: right;
+    width: 50%; 
+    float: right; 
 }
 form {
-   margin: 3rem 8rem 3rem 0; 
-   padding: 3rem 5rem;
-   background-color: white;
-   border-radius: 4px; 
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-   text-align: left; 
+    width: 90%; 
+    margin: 3rem auto; 
+    padding: 3rem 5rem;
+    background-color: white;
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left; 
    
 }
 .form-control {
@@ -560,18 +563,6 @@ form p{
     #services {
         padding: 2rem 2rem; 
     }
-    #contact-message{
-        float: none; 
-        margin: 5rem auto; 
-        width: 50%; 
-    }
-    #form-container {
-        float: none; 
-    }
-    form {
-        width: 90%; 
-        margin: 5rem auto; 
-    }
 
 }
 @media only screen and (max-width: 992px){
@@ -586,10 +577,9 @@ form p{
     }
     .first-section{
         width: 90%; 
+        padding: 2rem 2rem; 
     }
-    .first-section p{
-        padding: 2rem 0; 
-    }
+   
     .top-row-wrapper {
         justify-content: space-between;
     }
@@ -597,7 +587,7 @@ form p{
         display: block; 
     }
     #logo {
-        margin: 0 2rem; 
+        margin: 0 0 0 1rem; 
         height: 6rem;
         width: auto; 
     }
@@ -645,14 +635,16 @@ form p{
     }
     .service {
         width: 100%; 
+        margin: 0; 
     }
     .service-content {
         text-align: center;
         width: 100%; 
         height: 15rem; 
+        border-radius: 0; 
     }
     .service-content h3 {
-        padding-bottom: 1rem; 
+        padding-bottom: 2rem; 
     }
     .service-imgs {
         height: 15rem; 
@@ -660,6 +652,7 @@ form p{
     }
     .service-imgs img {
         height: 15rem; 
+        border-radius: 0; 
     }
     #about {
         margin: 0 5rem; 
@@ -669,6 +662,19 @@ form p{
     }
     .gallery-content{
         padding: 5rem 2rem;
+    }
+    #contact-message{
+        float: none; 
+        margin: 5rem auto; 
+        width: 100%; 
+    }
+    #contact-message p{
+        margin: 5rem auto; 
+    }
+    #form-container {
+        float: none; 
+        width: 100%; 
+        padding: 5rem auto;
     }
 }
 @media only screen and (max-width: 768px){
@@ -683,12 +689,12 @@ form p{
         width: 100%; 
         text-align: center; 
     }
-    .service-imgs img {
-
-    }
     .service-content h3 {
-        padding-bottom: 0; 
+        padding-bottom: 1rem; 
         padding-top: 2rem; 
+    }
+    .service-content p {
+        padding: 1rem .5rem; 
     }
     #about {
         margin: 0 1rem; 
@@ -725,5 +731,8 @@ form p{
     }
     .more a {
         font-size: 1rem; 
+    }
+    .service-content p {
+        line-height: 1.5rem;
     }
 }
