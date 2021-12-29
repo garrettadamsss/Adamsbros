@@ -18,4 +18,5 @@ Currently, the website is in its initial version. It is in the process of being 
 
 Below are screenshots showing the contact page as github pages does not permit PHP. 
 
-![image](https://user-images.githubusercontent.com/78715643/147620041-65299c9b-336f-4ee9-a3bf-8aa5f23bc760.png)
+![Screenshot (251)](https://user-images.githubusercontent.com/78715643/147620430-cf70177c-8cc1-4628-9485-c2814406bfdf.png)
+
