@@ -7,7 +7,7 @@ The website serves two main functions. The first is to be a space for sample pho
 
 Javascript and PHP are used for the contact form using the main() function and sends the form information to the specified email. The website is responsive for all screen sizes using media queries. CSS animations and transitions are used throughout the website. Javascript is also used for creating a slide gallery for the home page. 
 
-Currently, the website is in its initial version. It is in the process of being published and there are small changes I would like to make to the website such as a streamlined gallery page and more information. 
+Currently, the website is in its initial version. It is in the process of being published, but it is available through github pages. There are small changes I would like to make to the website such as a streamlined gallery page and more information. 
 
 ## Technologies
 * HTML
