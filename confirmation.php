@@ -1,23 +1,25 @@
+
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <link rel="icon" href="favicon(1).ico">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Adams Brothers Pools | About</title>
-        <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
     <body>
          
-        <header id = "top">
+    <header id = "top">
             <div class = "top-row-wrapper">
                 
                 <p id = "serving">Serving Southern California Since 1981</p>
-                <a href = "index.html"><img id = "logo" src = "../adams_logo.png" alt = "logo"></a>
+                <a href = "index.html"><img id = "logo" src = "adams_logo.png" alt = "logo"></a>
                 <p id = "start">Start Your Project Today!
                     <a href = "contact.php" >FREE ESTIMATE</a>
                 </p>
-                 <img src = "../menu_icon.png" id = "menu-icon" onclick = "toggleMenu()">
+                 <img src = "menu_icon.png" id = "menu-icon" onclick = "toggleMenu()">
             </div>
            
             <nav id = "navbar">
@@ -52,42 +54,10 @@
         </header>
         <main>
             <div class = "first-section-wrapper">
-                <h2 class = "page-title"> COPING </h2>
+                <h2 class = "page-title"> THANK YOU</h2>
             </div>
             <div class = "content-wrapper">
-            
-                 <div class = "link-wrapper">
-                    <div class = "supplier">
-                        <a href = "https://view.flipdocs.com/?ID=10007320_820046" target = "_blank"><img src = "../supplier_images/npt-logo.svg"></a>
-                        <p>4980 E Landon Dr, Anaheim, CA 92807</p>
-                    </div>
-                    <div class = "supplier">
-                        <a href = "https://www.pacificstone.net/?gclid=EAIaIQobChMI_Yys9uHk8wIVEI_ICh2qPQGzEAAYASAAEgJdoPD_BwE" target = "_blank"><img src = "../supplier_images/pacificstone.png"></a>
-                        <p>1201 E Wakeham Ave, Santa Ana, CA 92705</p> 
-                    </div>
-                    <div class = "supplier">
-                        <a href = "https://www.hancreteproducts.com/" target = "_blank"><img src = "../supplier_images/hancrete.PNG"></a>
-                        <p>2010 S Cucamonga Ave, Ontario, CA 91761</p>
-                    </div>
-                </div>
-                <div class = "img-wrapper">
-                    <img src = "../materials/coping/coping.JPG">
-                    <img src = "../materials/coping/coping2.JPG">
-                </div>
-            
-                <h3 id = "coping">Custom Concrete Coping</h3>
-                <div class = "img-wrapper">
-                    <img src = "../materials/coping/custom_coping.JPG">
-                    <img src = "../materials/coping/custom_coping (5).JPG">
-                    <img src = "../materials/coping/custom_coping (4).JPG">
-                    <img src = "../materials/coping/custom_coping (6).JPG">
-                    <img src = "../materials/coping/custom_coping (7).JPG">
-                    <img src = "../materials/coping/custom_coping 8.JPEG">
-                </div>
-                <div class = "more">
-                    <p>For more photos, check out the gallery!</p>
-                    <a id = "gallery-button" href = "g_coping.html">View Tile & Coping Gallery</a>
-                </div>
+                <p id = "confirmation">Your message has been sent. We will reach out to you as soon as possible!</p>
             </div>
            
         </main>
@@ -95,6 +65,6 @@
             <a href = "#top"> &uarr; </a>
             <p id = "rights">Adams Brothers Pools -All rights reserved @2021</p> 
         </footer>
-        <script src = "../js/menu.js" type = "text/javascript"></script> 
+        <script src = "js/menu.js" type = "text/javascript"></script> 
     </body>
 </html> 

@@ -61,7 +61,7 @@ header{
     border-radius: 5px; 
 }
 #start a:hover {
-    background-color: hsl(202, 50%, 70%);
+    background-color: hsl(207, 66%, 49%);
     color: white; 
     border: none; 
 }
@@ -124,7 +124,6 @@ header ul li:hover .dropdown{
 main{
     background-color: hsl(0, 0%, 95%);
     color:hsl(0, 0%, 20%); 
-
 }
  h1, h2, h3{
     letter-spacing: .2rem;
@@ -322,8 +321,12 @@ footer p{
 }
 /*about page */
 #about {
-    margin: 0 10rem; 
+    margin: 5rem 15rem; 
     position: relative; 
+}
+#about p{
+    line-height: 2rem; 
+    font-size: 1.2rem; 
 }
 #about::after {
     content: "";
@@ -444,9 +447,17 @@ form p{
 #submit:hover {
     background-color: hsl(202, 60%, 70%);
 }
+/*Confirmation */
+#confirmation {
+    font-size: 1.5rem;
+    line-height: 2.5rem; 
+    margin: 10rem auto; 
+    text-align: center;
+    width: 40%; 
+}
 
 /*Materials*/
-.content-wrapper{
+.content-wrapper{ 
     padding: 5rem 10rem; 
 }
 .more{
@@ -538,18 +549,39 @@ form p{
     animation-name: slide; 
     animation-duration: 2s; 
 }
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    display: none; 
+    align-items: center;
+    justify-content: center;
+}
+.full-img img{
+    width: 70%;
+    height: 80%; 
+}
 .gallery-imgs {
-    text-align: center; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem; 
 }
 .gallery-imgs img{
-    height: 15rem;
-    width: auto; 
-    margin: .5rem; 
-    vertical-align: middle; 
+    width: 100%; 
+    height: 20rem; 
+    cursor: pointer; 
 }
 
 
 /* Media Querries */
+@media only screen and (min-width: 1200px){
+    .body {
+        max-width: 1200px;
+    }
+}
 @media only screen and (max-width: 1200px){
     #serving {
         display: none; 
@@ -563,7 +595,7 @@ form p{
     #services {
         padding: 2rem 2rem; 
     }
-
+   
 }
 @media only screen and (max-width: 992px){
     .slideshow {
@@ -676,6 +708,9 @@ form p{
         width: 100%; 
         padding: 5rem auto;
     }
+    #recomendation {
+        margin: 0 5rem; 
+    }
 }
 @media only screen and (max-width: 768px){
     .first-section{
@@ -710,6 +745,9 @@ form p{
     }
     .more {
         width: 80%; 
+    }
+    #recomendation {
+        margin: 0 1rem;
     }
 }
 @media only screen and (max-width: 550px){

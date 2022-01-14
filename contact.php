@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <link rel="icon" href="favicon(1).ico">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Adams Brothers Pools | About</title>
-        <link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -14,11 +15,11 @@
             <div class = "top-row-wrapper">
                 
                 <p id = "serving">Serving Southern California Since 1981</p>
-                <a href = "index.html"><img id = "logo" src = "../adams_logo.png" alt = "logo"></a>
+                <a href = "index.html"><img id = "logo" src = "adams_logo.png" alt = "logo"></a>
                 <p id = "start">Start Your Project Today!
                     <a href = "contact.php" >FREE ESTIMATE</a>
                 </p>
-                 <img src = "../menu_icon.png" id = "menu-icon" onclick = "toggleMenu()">
+                 <img src = "menu_icon.png" id = "menu-icon" onclick = "toggleMenu()">
             </div>
            
             <nav id = "navbar">
@@ -56,7 +57,7 @@
                 <h2 class = "page-title"> CONTACT US</h2>
             </div>
             <div id = "contact-message">
-                <p> Reach us by filling out the form. We will respond ASAP.</p>
+                <p>Your dream pool begins today! Reach us by filling out the form.</p>
             </div>
             <?php
                 
@@ -128,7 +129,7 @@
                     }
                     if(success($error)){
                         $subject = 'Message From Website';
-                        $mailTo = "garrettadamssss@gmail.com";
+                        $mailTo = "donna@adamsbros.com";
                         $headers = "From: " . $email;          
                         $body = "You have recieved a message from ". $fullname . "\n\t-Basic Information-" . "\n\tAddress: " . $address .
                         "\n\tCity: " . $city . "\n\tState: " . $state . "\n\tZip: " . $zip . "\n\tPhone Number: " . $phone . 
@@ -251,7 +252,7 @@
                         <p>A message is required</p> 
                     </div>
 
-                    <script src = "../js/validation.js" type = "text/javascript"></script>
+                    <script src = "js/validation.js" type = "text/javascript"></script>
                     <input type = "submit" id = "submit" name = "submit">
                 </form>
             </section>
@@ -262,6 +263,6 @@
             <a href = "#top"> &uarr; </a>
             <p id = "rights">Adams Brothers Pools -All rights reserved @2021</p> 
         </footer>
-        <script src = "../js/menu.js" type = "text/javascript"></script> 
+        <script src = "js/menu.js" type = "text/javascript"></script> 
     </body>
 </html> 
