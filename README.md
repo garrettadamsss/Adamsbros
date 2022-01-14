@@ -7,7 +7,7 @@ The website serves two main functions. The first is to be a space for sample pho
 
 PHP are used for the contact form using the main() function and sends the form information to the specified email. Both Javascript and PHP are used for input validation, while data clearing is used with just PHP. The website is responsive for all screen sizes using media queries. CSS animations and transitions are used throughout the website. Javascript is also used for creating a slide gallery for the home page. 
 
-Currently, the website is in its initial version. It is in the process of being published, but it is available through github pages. There are small changes I would like to make to the website such as a streamlined gallery page and more information. 
+Currently, the website is in its initial version. There are small changes I would like to make to the website such as a streamlined gallery page and more information. 
 
 ## Technologies
 * HTML
@@ -16,11 +16,6 @@ Currently, the website is in its initial version. It is in the process of being 
 * PHP 
 * XAMP WITH VISUAL STUDIO 
 
-Below are screenshots showing the contact page as github pages does not permit PHP. 
-
-![Screenshot (251)](https://user-images.githubusercontent.com/78715643/147620430-cf70177c-8cc1-4628-9485-c2814406bfdf.png)
-
-![Screenshot (252)](https://user-images.githubusercontent.com/78715643/147620514-311218a4-d3d7-470a-9e3b-751d27fa8f29.png)
-
-![Screenshot (253)](https://user-images.githubusercontent.com/78715643/147620524-50e64c63-0204-4d8b-8d15-46f40ad6c062.png)
+The website is hosted on Godaddy and the link is below.
+https://adamsbros.com/index.html
 
