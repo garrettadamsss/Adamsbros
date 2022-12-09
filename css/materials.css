@@ -1,0 +1,87 @@
+/*Materials*/
+.content-wrapper{ 
+    padding: 5rem 10rem; 
+}
+.more{
+    font-size: 1.3rem;
+    text-align:center;
+    width: 70%;
+    margin: 3rem auto 0 auto; 
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.more a {
+    padding: .5rem;
+    font-size: 1.2rem;
+    background: none;
+    font-weight: 550; 
+    border: 2px solid hsl(207, 66%, 40%);
+    color: hsl(207, 66%, 40%);
+    border-radius: 10px;
+    transition: all .5s; 
+    
+}
+.more a:hover {
+    background-color: hsl(202, 50%, 70%);
+    border: black; 
+    color: white; 
+}
+.more p {
+    margin: 1rem; 
+}
+.content-wrapper h3 {
+    text-decoration: underline; 
+    font-size: 2rem; 
+    text-align: left;
+    color:hsl(0, 0%, 30%);
+}
+.img-wrapper {
+    text-align: center; 
+    width: 100%; 
+
+}
+.img-wrapper img {
+    height: 25rem;
+    width: auto; 
+    max-width: 90%; 
+    margin: 1rem; 
+}
+.link-wrapper {
+    text-align: center; 
+    flex: 1;
+
+}
+.link-wrapper a img{
+    background-color: white; 
+    padding: 2rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    height: 10rem;
+    width: 10rem; 
+}
+.supplier {
+    display: inline-block;
+    margin: 3rem 4rem; 
+    vertical-align:middle; 
+}
+.supplier p{
+    width: 12rem; 
+    height: 5rem;
+    margin: 0; 
+
+}
+#recomendation {
+    margin: 0 10rem; 
+}
+#coping{
+    margin: 3rem 0; 
+}
+.flexbox{
+    display: flex; 
+}
+.flexbox-child{
+    flex: 1; 
+}
+#resource {
+    margin: 3rem 0; 
+}

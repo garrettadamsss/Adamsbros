@@ -1,0 +1,28 @@
+/*about page */
+#about {
+    margin: 5rem 15rem; 
+    position: relative; 
+}
+#about p{
+    line-height: 2rem; 
+    font-size: 1.2rem; 
+}
+#about::after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(hsl(207, 60%, 34%), hsl(202, 82%, 69%) );
+    position: absolute;
+    left: -20px;
+    top: 5px; 
+
+}
+#about h3 {
+    margin-bottom: 2rem; 
+    padding-top: .5rem; 
+    text-decoration: none;
+    color:hsl(0, 0%, 20%);
+}
+.content-wrapper {
+    padding: 5rem 10rem; 
+}

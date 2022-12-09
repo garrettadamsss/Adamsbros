@@ -1,0 +1,101 @@
+#contact-message {
+    float: left; 
+    width: 50%; 
+    text-align: center;
+    font-size: 2rem; 
+}
+#contact-message p {
+    margin: 20rem 10rem; 
+    color: hsl(202, 60%, 50%);
+    line-height: 2rem; 
+    max-width: 80%;
+
+}
+#form-container {
+    width: 50%; 
+    float: right; 
+}
+form {
+    width: 90%; 
+    margin: 3rem auto; 
+    padding: 3rem 5rem;
+    background-color: white;
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left; 
+   
+}
+.form-control {
+    margin: 1.3rem 0; 
+}
+.form-control.name {
+    margin-top: 0; 
+}
+.form-control.city {
+   float: left; 
+   margin: 0 1.5rem 1.3rem 0; 
+
+}
+.form-control.state {
+    float: left; 
+    margin: 0 0 1.3rem 0; 
+}
+
+.form-control.zip {
+    clear: both; 
+    float: left; 
+    margin: 0 1.5rem 1.3rem 0; 
+    
+}
+.form-control.phone {
+    float: left; 
+    margin: 0 0 1.3rem 0; 
+}
+.form-control.email{
+    clear: both; 
+}
+input, textarea, select{
+    display: block; 
+    width: 100%; 
+    height: 2rem; 
+    font: inherit;
+    border: 2px solid hsl(0, 0%, 60%); 
+
+}
+select {
+    height: 2.2rem; 
+    width: 13rem; 
+}
+textarea {
+    height: 4rem; 
+    resize: none; 
+}
+form p{         
+    visibility: hidden;
+    color:red;
+    font-size: .8rem; 
+}
+.form-control.success input, .form-control.success textarea{
+    border-color: #2ecc71;
+}
+.form-control.error input, .form-control.error textarea{
+    border-color: #e74c3c; 
+}
+.form-control.error p {
+    visibility: visible; 
+}
+.form-control .phpErr{
+    float: right; 
+    color: red; 
+    font-size: .8rem; 
+}
+#submit {
+    background-color: hsl(202, 60%, 60%);
+    font: inherit; 
+    font-size: 1.3rem;
+    border-radius: 4px; 
+    color: white; 
+} 
+#submit:hover {
+    background-color: hsl(202, 60%, 70%);
+}
