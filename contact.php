@@ -5,7 +5,7 @@
         <link rel="icon" href="favicon(1).ico">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Adams Brothers Pools | About</title>
+        <title>Adams Brothers Pools | Contact</title>
         <link rel = "stylesheet" type = "text/css" href = "css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     </head>
