@@ -130,9 +130,11 @@
                         $message = cleanData($_POST["message"]);
                     }
                     if(success($error)){
-                        $subject = 'Message From Website';
+                        $subject = 'Contact Form Submission';
                         $mailTo = "donna@adamsbros.com";
-                        $headers = "From: " . $email;          
+                        $headers = "From: noreply@adamsbros.com\r\n";
+                        $headers .= "Reply-To: " . $_POST["email"] . "\r\n";     
+                        $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
                         $body = "You have recieved a message from ". $fullname . "\n\t-Basic Information-" . "\n\tAddress: " . $address .
                         "\n\tCity: " . $city . "\n\tState: " . $state . "\n\tZip: " . $zip . "\n\tPhone Number: " . $phone . 
                         "\n\tEmail: " . $email . "\n\n" . $message;
